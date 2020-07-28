@@ -1,0 +1,11 @@
+version: '3'
+services:
+  lumary:
+    build: ./addons/lumary
+    command: 'npm run start'
+    volumes:
+      - ./addons/lumary:/home/node/app
+    environment:
+      - NODE_ENV=development
+    ports:
+      - 3000:3000

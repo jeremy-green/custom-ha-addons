@@ -1,0 +1,14 @@
+{
+  "name": "Lumary",
+  "version": "0.0.1",
+  "slug": "lumary",
+  "description": "Home Assistant addon for Lumary",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "before",
+  "boot": "auto",
+  "options": {},
+  "schema": {},
+  "ports": {
+    "3000/tcp": 10304
+  }
+}
