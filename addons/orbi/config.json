@@ -1,0 +1,20 @@
+{
+  "name": "Orbi",
+  "version": "0.0.1",
+  "slug": "orbi",
+  "description": "Home Assistant addon for Orbi",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "before",
+  "boot": "auto",
+  "options": {
+    "router_user": "",
+    "router_pass": ""
+  },
+  "schema": {
+    "router_user": "str",
+    "router_pass": "str"
+  },
+  "ports": {
+    "3000/tcp": 10305
+  }
+}

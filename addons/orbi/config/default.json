@@ -1,0 +1,21 @@
+{
+  "sampleSize": 30,
+  "confidenceThreshold": 0.8,
+  "interval": 2000,
+  "routerMap": {
+    "UNKNOWN": "Orbi Satellite",
+    "UPSTAIRS": "Guest Bedroom Satellite",
+    "DOWNSTAIRS": "Living Room Satellite",
+    "BASEMENT": "Chronos"
+  },
+  "devices": [
+    {
+      "id": "192.168.1.24",
+      "name": "Jeremy"
+    },
+    {
+      "id": "192.168.1.2",
+      "name": "Erin"
+    }
+  ]
+}

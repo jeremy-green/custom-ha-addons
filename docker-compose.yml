@@ -2,10 +2,20 @@ version: '3'
 services:
   lumary:
     build: ./addons/lumary
-    command: 'npm run start'
     volumes:
       - ./addons/lumary:/home/node/app
+      - /home/node/app/node_modules
     environment:
       - NODE_ENV=development
     ports:
       - 3000:3000
+
+  orbi:
+    build: ./addons/orbi
+    volumes:
+      - ./addons/orbi:/home/node/app
+      - /home/node/app/node_modules
+    environment:
+      - NODE_ENV=development
+    ports:
+      - 3001:3000
