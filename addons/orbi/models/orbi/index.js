@@ -20,10 +20,11 @@ const floors = Object.values(floorMap).reduce(
 );
 
 function handleFlooring(people) {
-  Object.values(floors).forEach(f => f.empty());
-  people.forEach(p => {
+  Object.values(floors).forEach((f) => f.empty());
+  people.forEach((p) => {
     const floor = floorMap[p.router];
-    floors[floor].add(p.name);
+    console.log(floor, floorMap[p.router], '<=====', p);
+    floors[floor].add(p);
   });
 }
 
@@ -47,7 +48,7 @@ interpret(
         on: {
           DELIVERY: {
             actions: send((_, event) => ({ ...event, type: 'PROCESS' }), {
-              to: context => context.people,
+              to: (context) => context.people,
             }),
           },
           PROCESSED: {

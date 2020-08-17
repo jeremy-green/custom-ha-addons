@@ -29,7 +29,7 @@ function getDeviceStatusByAddress(devices, address) {
 }
 
 function handleDeviceData(people, data) {
-  return Promise.all(people.map(person => person.handleDelivery(data)));
+  return Promise.all(people.map((person) => person.handleDelivery(data)));
 }
 
 class Person {
@@ -50,9 +50,7 @@ class Person {
     this.counter.add(router);
     this.index += 1;
 
-    console.log(this.id, this.name, router);
-
-    if (!this.router) {
+    if (this.router === null) {
       this.router = router;
       return;
     }
@@ -79,7 +77,7 @@ class People {
     id: 'people',
     initial: 'wait',
     context: {
-      people: devices.map(device => new Person(device)),
+      people: devices.map((device) => new Person(device)),
     },
     states: {
       wait: {
