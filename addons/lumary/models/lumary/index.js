@@ -41,8 +41,8 @@ class Lumary {
 
     return new Promise((resolve, reject) => {
       const client = new Net.Socket();
-      client.on('close', resolve);
-      client.on('error', reject);
+      client.once('close', resolve);
+      client.once('error', reject);
       // client.on('timeout', reject);
 
       client.connect({ port, host }, () => {
